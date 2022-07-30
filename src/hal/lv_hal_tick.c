@@ -8,6 +8,7 @@
  *********************/
 #include "lv_hal_tick.h"
 #include <stddef.h>
+#include <limits.h>
 
 #if LV_TICK_CUSTOM == 1
     #include LV_TICK_CUSTOM_INCLUDE
