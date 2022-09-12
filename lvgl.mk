@@ -1,6 +1,6 @@
-LVGL_PATH ?= ${shell pwd}/lvgl
+LVGL_PATH ?= $(LVGL_DIR)/$(LVGL_DIR_NAME)
 
-CSRCS += $(shell find $(LVGL_PATH)/src -type f -name '*.c')
-CSRCS += $(shell find $(LVGL_PATH)/demos -type f -name '*.c')
-CSRCS += $(shell find $(LVGL_PATH)/examples -type f -name '*.c')
-CFLAGS += "-I$(LVGL_PATH)"
+OBJS += $(shell find $(LVGL_PATH)/src -type f -name '*.c' | sed 's/\.c/\.o/g')
+OBJS += $(shell find $(LVGL_PATH)/demos -type f -name '*.c' | sed 's/\.c/\.o/g')
+OBJS += $(shell find $(LVGL_PATH)/examples -type f -name '*.c' | sed 's/\.c/\.o/g')
+INCLUDES += "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/"

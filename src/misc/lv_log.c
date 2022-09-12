@@ -96,21 +96,7 @@ void _lv_log_add(lv_log_level_t level, const char * file, int line, const char *
 #endif
         static const char * lvl_prefix[] = {"Trace", "Info", "Warn", "Error", "User"};
 
-#if LV_LOG_PRINTF
-        printf("[%s]" LOG_TIMESTAMP_FMT " %s: ",
-               lvl_prefix[level], LOG_TIMESTAMP_EXPR func);
-        vprintf(format, args);
-        printf(" \t(in %s line #%d)\n", &file[p], line);
-#else
-        if(custom_print_cb) {
-            char buf[512];
-            char msg[256];
-            lv_vsnprintf(msg, sizeof(msg), format, args);
-            lv_snprintf(buf, sizeof(buf), "[%s]" LOG_TIMESTAMP_FMT " %s: %s \t(in %s line #%d)\n",
-                        lvl_prefix[level], LOG_TIMESTAMP_EXPR func, msg, &file[p], line);
-            custom_print_cb(buf);
-        }
-#endif
+
 
 #if LV_LOG_USE_TIMESTAMP
         last_log_time = t;

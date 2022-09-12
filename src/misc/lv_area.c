@@ -6,6 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
+#include <limits.h>
 #include "../lv_conf_internal.h"
 
 #include "lv_area.h"

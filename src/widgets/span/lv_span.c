@@ -6,6 +6,7 @@
 /*********************
  *      INCLUDES
  *********************/
+ #include <limits.h>
 #include "lv_span.h"
 
 #if LV_USE_SPAN != 0
