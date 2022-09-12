@@ -1,17 +1,17 @@
-CSRCS += lv_draw_sw.c
-CSRCS += lv_draw_sw_arc.c
-CSRCS += lv_draw_sw_blend.c
-CSRCS += lv_draw_sw_dither.c
-CSRCS += lv_draw_sw_gradient.c
-CSRCS += lv_draw_sw_img.c
-CSRCS += lv_draw_sw_letter.c
-CSRCS += lv_draw_sw_line.c
-CSRCS += lv_draw_sw_polygon.c
-CSRCS += lv_draw_sw_rect.c
-CSRCS += lv_draw_sw_transform.c
-CSRCS += lv_draw_sw_layer.c
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_arc.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_blend.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_dither.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_gradient.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_img.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_letter.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_line.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_polygon.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_rect.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_transform.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw/lv_draw_sw_layer.o
 
 DEPPATH += --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw
 VPATH += :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw
 
-CFLAGS += "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw"
+INCLUDES += "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/draw/sw"

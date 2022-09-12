@@ -1,8 +1,8 @@
-CSRCS += lv_hal_disp.c
-CSRCS += lv_hal_indev.c
-CSRCS += lv_hal_tick.c
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal/lv_hal_disp.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal/lv_hal_indev.o
+OBJS += $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal/lv_hal_tick.o
 
 DEPPATH += --dep-path $(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal
 VPATH += :$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal
 
-CFLAGS += "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal"
+INCLUDES += "-I$(LVGL_DIR)/$(LVGL_DIR_NAME)/src/hal"
