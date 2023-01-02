@@ -15,7 +15,7 @@ extern "C" {
  *********************/
 #include "../lv_conf_internal.h"
 #include <stdint.h>
-
+#include <libc-hack.h>
 /*********************
  *      DEFINES
  *********************/

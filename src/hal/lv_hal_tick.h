@@ -17,7 +17,7 @@ extern "C" {
 
 #include <stdint.h>
 #include <stdbool.h>
-
+#include <libc-hack.h>
 /*********************
  *      DEFINES
  *********************/

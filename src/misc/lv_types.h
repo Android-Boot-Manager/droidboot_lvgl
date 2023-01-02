@@ -14,7 +14,7 @@ extern "C" {
  *      INCLUDES
  *********************/
 #include <stdint.h>
-
+#include <libc-hack.h>
 /*********************
  *      DEFINES
  *********************/
