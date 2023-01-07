@@ -11,6 +11,7 @@
 
 #include <stdarg.h>
 #include <string.h>
+#include <libc-hack.h>
 #include "lv_printf.h"
 #include "../hal/lv_hal_tick.h"
 
